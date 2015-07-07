@@ -1,5 +1,7 @@
 package com.example.android.sunshine.app;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -33,6 +35,7 @@ public class SettingsActivity extends PreferenceActivity
         // updated when the preference changes.
         // TODO: Add preferences
         bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_location_key)) );
+        bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_units_key)) );
     }
 
     /**
@@ -70,4 +73,6 @@ public class SettingsActivity extends PreferenceActivity
         }
         return true;
     }
+
+
 }
